@@ -22,10 +22,11 @@ public class Student {
     public String toString() {
         return "\nУченик: " + name + ' ' + Arrays.toString(grades.toArray()) + ' ' + specialty;
     }
-        public double getAverageGrade() {
-            return grades.stream()
-                    .mapToDouble(s -> s)
-                    .average().orElse(0);
-        }
+
+    public double getAverageGrade() {
+        return grades.stream()
+                .mapToDouble(s -> s)
+                .average().orElse(0);
+    }
 }
 
